@@ -1,89 +1,7 @@
-{% load static %}
-{% static "image" as baseUrl %}
+{% extends 'main.html' %}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block content %}
 
-    <!-- Bootstrap CSS -->    
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<script src= "https://kit.fontawesome.com/332a215f17.js" cross origin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">   
-<title>Construction</title>
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
-  </head>
-  <body>
-     <div class="container-fluid icons py-2 px-3">
-         <div class="row">
-             <div class="col d-flex justify-content-between align-items-baseline">
-                 <div class="icons">
-                     <a href="facebook.com" class="mx-2">
-                         <i class="fab fa-facebook"></i>
-                     </a>
-                     <a href="#" class="mx-2">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="mx-2">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                 </div>
-                 <h6>Jalgalenirmansewa@gmail.com</h6>
-             </div>
-         </div>
-     </div>
-      <div id="header">
-        <nav id="navbar" class="navbar navbar-expand-md">
-        <a class="navbar-brand px-2 py-0" href="index.html"><img src="{{project.img.Url}}" alt="logo" width="110"> </a>
-        
-          <button  class="navbar-toggler bg-light" type="button" 
-              data-toggle="collapse"  data-target="#navbar">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-          </button>
-          
-          <div class="collapse navbar-collapse justify-content-between" id="navbar">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-              <a href="index.html" class="nav-link m-2 text-capitalize nav-active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link m-2 text-capitalize">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="project.html" class="nav-link m-2 text-capitalize">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="services.html" class="nav-link m-2 text-capitalize">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="gallery.html" class="nav-link m-2 text-capitalize">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link m-2 text-capitalize">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="register.html" class="nav-link m-2 text-capitalize">Register</a>
-                  </li>
-                </ul>
-                 <form class="form-inline ml-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="search">
-                        <div class="input-group-append">
-                            <button class = "btn search-btn" type = "button">
-                            <i class = "fas fa-search text-muted"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form> 
-            </div>
-          </nav>
-          <!--Banner-->
 <section>
     <div class="container-fluid">
         <div class="row banner">
@@ -93,475 +11,247 @@
                 <a href="contact.html" class="btn btn-main btn-lg m-3">Contact us</a>
                 <a href="#" class="btn btn-main btn-lg m-3">Know More</a>
             </div>
-
         </div>
     </div>
 </section>
-    <!--About Section----->
-    <section>
-      <div class="container">
-        <div class="about mb-4">
-            <div class="row text-center m-4">
-                <div class="col-md-12 text-center">
-                    <h6>Know us more</h6>
-                    <h2 class="mb-4">About Us</h2>
-                    <span class="title-border"></span>
-                    <h1>CONSTRUCTION COMPANY IN HETAUDA SINCE 1998</h1>
-                    <p> Jalgale Nirman Sewa shortly named as BNS, a construction company in Hetauda,Nepal, was originally established in 1998 A. D. (2055 B. S.) with a sole objective of providing innovative and sustainable solutions to create a sustainable future for its people, customers and communities. Till the establishment BNS has been emerged as one of leading and reputed construction company in Nepal. It has been established with the aim of providing construction works services in the field of roads, highways, bridges, drainage, irrigation, water supply, hydropower, 
-                    electrical transmission and distribution lines, tunnels, building and industria
-                    </p>
-                </div>
-            </div>
-            <!--Parts-->
-            <div class="row text-center">
-              <div class="col-lg-4 my-2 py-3">
-              <i class="fas fa-cubes fa-3x mb-3"></i>
-                    <h5 class="p-3 font-weight-bold">Pre-construction Services</h5>
-                    <p>Preconstruction services are services offered before actual construction begins to help plan, analyse and establish needs for construction. 
-                    </p>
-            </div>
 
-                <!--end of part 1-->
-            <div class="col-lg-4 my-2 py-3">
-              <i class="far fa-edit fa-3x mb-3"></i>                         
-              <h5 class="p-3 font-weight-bold">Design-Build</h5>
-              <p>Design-build is a method of project delivery in which one entity - the design-build team - works under a single contract with the project owner to provide design 
-                    and construction services. One entity, one contract, 
-                    one unified flow of work from initial concept through completion. Design-build is also known as design/construct and single-source responsibility. .</p>
+  <div class="service-inner-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- left service item 01 -->
+          <div class="left-service-item">
+            <!-- Icon -->
+            <div class="left-icon">
+              <i class="fas fa-city fa-2x"></i>
             </div>
-
-            <!--Part 3-->
-            <div class="col-lg-4 my-2 py-3">
-             <i class="fas fa-th fa-3x mb-3"></i>
-                <h5 class="p-3 font-weight-bold">Construction Services</h5>
-                <p>To expand your market share you need the most
-                      comprehensive source of information on construction
-                      projects, period. 
-                </p>
-            </div>                           
+            <!-- Service item title & description -->
+            <h3> Design </h3>
+            <p>Lorem ipsum dolor, consectetur sed do adipisicing elit,
+              sed do eiusmod tempor incididunt</p>
+          </div>
+          <!-- left service item 02 -->
+          <div class="left-service-item">
+            <!-- Icon -->
+            <div class="left-icon">
+              <i class="fas fa-torii-gate fa-2x"></i>
+            </div>
+            <!-- Service item title & description -->
+            <h3> Build </h3>
+            <p>Lorem ipsum dolor, consectetur sed do adipisicing
+              elit, sed do eiusmod tempor incididunt</p>
+          </div>
+          <!-- left service item 03 -->
+          <div class="left-service-item">
+            <!-- Icon -->
+            <div class="left-icon">
+              <i class="fas fa-building fa-2x"></i>
+            </div>
+            <!-- service item title & description -->
+            <h3> Sustain</h3>
+            <p>Lorem ipsum dolor, consectetur sed do adipisicing elit,
+              sed do eiusmod tempor incididunt</p>
           </div>
         </div>
-    </div>
-</section>
-<!--End of About Section-->
-
-
-  <!---Our PROJECTS----->
-<section class="projects py-3">
-  <div class="container">
-      <div class="projects mb-4">
-        <div class="row text-center m-4">
-              <div class="col-md-12 text-center">
-                <h2 class="mb-4">Our projects</h2>
-                  <span class="title-border"></span>
-                  <p class="text-light">We have a team of talented professionals which utilizes its innovative mind and
-                    excellent ideas in providing construction services in Nepal. Our service is known for proper planning, 
-                    timely execution and high reliability. 
-                    Our construction services are provided by our team of design engineer, 
-                    construction manager, construction engineer and project architect. 
-                    They work hard to meet the diverse requirements of the customers.</p>
-              </div>
-                 
-          {% for project in projt %}
-            <!--Parts imaage overlay-->
-          <div class="row text-center">
-            <div class="col-lg-4 my-2">
-              <div class="projects-container"><!--box-->
-                <div class="img-content"><!--imgBx-->
-                  <img src="{{project.img.url}}"alt="commerial"class="img-fluid project-img">                  
-                </div>
-                <div class="content">
-                <h3 class="text-uppercase text-center text-dark px-3"> {{project.name}} </h3>
-                <p class="text-dark">{{project.desc}}</p>
-                </div>  
-              </div>         
-            </div>               
-              
-            <!--End of img-container over lay-->                                                        
-          </div> 
-          {%endfor%}            
-        </div>        
-      </div>     
-      </div>
-</section>
-
-<!--End of OUR projects Section-->
-       
-      <!--Services-->
-      <section class="services p-5" id="SERVICES">
-        <div class="container">
-          <div class="row">
-              <!--Title-->
-           <div class="col text-center mb-3">
-            <h2 class="mb-4">Our Services</h2>            
-            <span class="title-border"></span>
-
-          <p>Lorem ipsum dolor sit amet consectetur 
-           adipisicing elit. Nisi praesentium assumenda 
-           eveniet error repellendus, delectus, molestias 
-           magni voluptatum itaque libero excepturi quod hic 
-           illo quos eius mollitia modi corrupti? Itaque!</p>
-       </div>
-    
-       <!-- end of title--->
-      </div>
-      </div>    
-      </div>
-        
-        <div class="service-inner-wrapper">
-       <div class="container">
-       <div class="row">                
-  <div class="col-md-4">
-      <!-- left service item 01 -->
-        <div class="left-service-item">
-                 <!-- Icon -->
-         <div class="left-icon">
-         <i class="fas fa-city fa-2x"></i>
-             </div>
-                 <!-- Service item title & description -->
-             <h3> Design </h3>
-             <p>Lorem ipsum dolor, consectetur sed do adipisicing elit, 
-                 sed do eiusmod tempor incididunt</p>
-                </div>          
-           <!-- left service item 02 -->
-                <div class="left-service-item">
-                     <!-- Icon -->
-                     <div class="left-icon">
-                        <i class="fas fa-torii-gate fa-2x"></i>
-                     </div>
-                   <!-- Service item title & description -->
-                     <h3> Build </h3>
-                 <p>Lorem ipsum dolor, consectetur sed do adipisicing 
-                    elit, sed do eiusmod tempor incididunt</p>
-                 </div>
-         <!-- left service item 03 -->
-                <div class="left-service-item">
-                 <!-- Icon -->
-                  <div class="left-icon">
-                      <i class="fas fa-building fa-2x"></i>
-                     </div>
-                     <!-- service item title & description -->
-                     <h3> Sustain</h3>
-                    <p>Lorem ipsum dolor, consectetur sed do adipisicing elit, 
-                        sed do eiusmod tempor incididunt</p>
-            </div>                                            
-                    </div>
-                    <div class="col-md-4">
-                     <div class="service-pic">
-                    <img src="../assest/image/jcbb.jpg" alt ="img of JCB"class="center shadow">  
-
-                   
-                     </div>  
-                    </div>
-          <div class="col-md-4">              
+        <div class="col-md-4">
+          <div class="service-pic">
+            <img src="/static/image/jcbb.jpg" alt="img of JCB" class="center shadow">
+          </div>
+        </div>
+        <div class="col-md-4">
           <!-- right service item 01 -->
-                 <div class="right-service-item">
-                     <!-- Icon -->
-                 <div class="right-icon">
-                     <i class="fas fa-tasks fa-2x"></i>                    
-                            </div>
-                 <!-- service item title and description -->
-                    <h3> Quality</h3>                  
-             <p>Lorem ipsum dolor, consectetur sed do adipisicing elit, 
-                 sed do eiusmod tempor incididunt</p>        
-                        </div>
-
-         <!-- right service item 02 -->
-               <div class="right-service-item">
-          <!-- Icon -->
+          <div class="right-service-item">
+            <!-- Icon -->
             <div class="right-icon">
-             <i class="fas fa-truck-loading fa-2x"></i>
-              </div>
-                <!-- Service item title and description -->
-            <h3> Concrete transport</h3>
-            <p>Lorem ipsum dolor, consectetur sed do adipisicing 
-                elit, sed do eiusmod tempor incididunt</p> 
-            </div>           
-              <!-- right service item 03 -->
-             <div class="right-service-item">
-             <!-- Icon -->
-              <div class="right-icon">
-              <i class="fas fa-couch fa-2x"></i>
-                </div>
+              <i class="fas fa-tasks fa-2x"></i>
+            </div>
+            <!-- service item title and description -->
+            <h3> Quality</h3>
+            <p>Lorem ipsum dolor, consectetur sed do adipisicing elit,
+              sed do eiusmod tempor incididunt</p>
+          </div>
+
+          <!-- right service item 02 -->
+          <div class="right-service-item">
+            <!-- Icon -->
+            <div class="right-icon">
+              <i class="fas fa-truck-loading fa-2x"></i>
+            </div>
             <!-- Service item title and description -->
-           <h3> interior design</h3>             
-         <p>Lorem ipsum dolor, consectetur sed do adipisicing elit, 
-             sed do eiusmod tempor incididunt</p>
-             </div>
-         </div>
+            <h3> Concrete transport</h3>
+            <p>Lorem ipsum dolor, consectetur sed do adipisicing
+              elit, sed do eiusmod tempor incididunt</p>
+          </div>
+          <!-- right service item 03 -->
+          <div class="right-service-item">
+            <!-- Icon -->
+            <div class="right-icon">
+              <i class="fas fa-couch fa-2x"></i>
+            </div>
+            <!-- Service item title and description -->
+            <h3> interior design</h3>
+            <p>Lorem ipsum dolor, consectetur sed do adipisicing elit,
+              sed do eiusmod tempor incididunt</p>
+          </div>
         </div>
-       </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!--End of Services-->
+
+  <!--Testimonial Section-->
+  <section id="testimonials" class="py-5 all">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <!--       carousel-item-->
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto d-flex justify-content-between py-3">
+                <div class="align-self-center ml-3">
+                  <img src="/static/image/jcbb.jpg" alt="" class=" rounded-circle main-img">
+                </div>
+                <div class="review-text px-5">
+                  <h2 class="text-capitalize mb-3 des-color">Jalander</h2>
+                  <p class="text-light">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Itaque ullam, doloremque sequi rem impedit assumenda.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--carousel-item-->
+        <!--       carousel-item-->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto d-flex justify-content-between py-3">
+                <div class="align-self-center ml-3">
+                  <img src="/static/image/image_7.png" alt="" class=" rounded-circle main-img">
+                </div>
+                <div class="review-text px-5">
+                  <h2 class="text-capitalize mb-3 des-color">Donald Duck</h2>
+
+                  <p class="text-light">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Itaque ullam, doloremque sequi rem impedit assumenda.
+
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--carousel-item-->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto d-flex justify-content-between py-3">
+                <div class="align-self-center ml-3">
+                  <img src="/static/image/image_2.png" alt="" class=" rounded-circle main-img">
+                </div>
+                <div class="review-text px-5">
+                  <h2 class="text-capitalize mb-3 des-color">Bdfgy</h2>
+
+                  <p class="text-light">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ullam, doloremque sequi rem impedit
+                    assumenda.
+
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--carousel-item-->
+      </div>
+      <!-- carousel controls-->
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+
+      </a>
     </div>
   </section>
-     <!--End of Services-->
+  <!--End of Testimonial Section-->
 
-         <!--Testimonial Section-->
-         <section id="testimonials" class="py-5 all">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <!--       carousel-item-->
-                <div class="carousel-item active">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-10 mx-auto d-flex justify-content-between py-3">
-                        <div class="align-self-center ml-3">
-                          <img src="../assest/image/jcbb.jpg" alt="" class=" rounded-circle main-img">
-                        </div>
-                        <div class="review-text px-5">
-                          <h2 class="text-capitalize mb-3 des-color">Jalander</h2>
-                        <p class="text-light">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Itaque ullam, doloremque sequi rem impedit assumenda.
-                         </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--carousel-item-->
-                <!--       carousel-item-->
-                <div class="carousel-item">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-10 mx-auto d-flex justify-content-between py-3">
-                        <div class="align-self-center ml-3">
-                          <img src="image/image_7.png" alt="" class=" rounded-circle main-img">
-                        </div>
-                        <div class="review-text px-5">
-                          <h2 class="text-capitalize mb-3 des-color">Donald Duck</h2>
-        
-                          <p class="text-light">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                             Itaque ullam, doloremque sequi rem impedit assumenda.
-        
-                          </p>
-        
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--carousel-item-->
-                <div class="carousel-item">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-10 mx-auto d-flex justify-content-between py-3">
-                        <div class="align-self-center ml-3">
-                          <img src="image/image_2.png" alt="" class=" rounded-circle main-img">
-                        </div>
-                        <div class="review-text px-5">
-                          <h2 class="text-capitalize mb-3 des-color">Bdfgy</h2>
-        
-                          <p class="text-light">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque ullam, doloremque sequi rem impedit assumenda.
-        
-                          </p>
-        
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--carousel-item-->
-              </div>
-              <!-- carousel controls-->
-              <a class="carousel-control-prev" href="#carouselExampleControls" 
-              role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" ></span>
-            
-          </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" 
-              role="button" data-slide="next">
-            <span class="carousel-control-next-icon" ></span>
-            
-          </a>
-            </div>
-          </section>
-       <!--End of Testimonial Section-->
-
-<!--Contact us section-->
-<section class="bg-color p-5">
+  <!--Contact us section-->
+  <section class="bg-color p-5">
     <div class="container">
-        <div class="contact-us">
-            <div class="row">
-                <div class="col-md-11 text-center">
-                    <h2>Contact Us</h2>
-                    <span class="title-border"></span>
-                             <p>For more information contact us  </p>
-                 </div>
-            </div>
-            <div class="row contact">
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-mobile-alt fa-3x color"></i>
-                    <h5 class="mt-3">Phone</h5>
-                    <p>+977 01-4890386</p>
+      <div class="contact-us">
+        <div class="row">
+          <div class="col-md-11 text-center">
+            <h2>Contact Us</h2>
+            <span class="title-border"></span>
+            <p>For more information contact us </p>
+          </div>
+        </div>
+        <div class="row contact">
+          <div class="col-md-4 text-center">
+            <i class="fas fa-mobile-alt fa-3x color"></i>
+            <h5 class="mt-3">Phone</h5>
+            <p>+977 01-4890386</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-map-marker-alt fa-3x color"></i>
+            <h5 class="mt-3">Address</h5>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="far fa-envelope-open fa-3x color"></i>
+            <h5 class="mt-3">Email</h5>
+            <p>Jalgalenirmansewa@info.com
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-8 ">
+            <form>
+              <div class="input-group input-group-lg mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-user"></i>
+                  </span>
                 </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-map-marker-alt fa-3x color"></i>
-                    <h5 class="mt-3">Address</h5>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                <input type="text" class="form-control" placeholder="Name">
+              </div>
+
+              <div class="input-group input-group-lg mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-envelope"></i>
+                  </span>
                 </div>
-                <div class="col-md-4 text-center">
-                    <i class="far fa-envelope-open fa-3x color"></i>
-                    <h5 class="mt-3">Email</h5>
-                    <p>Jalgalenirmansewa@info.com
-                                          </p>
+                <input type="text" class="form-control" placeholder="Email">
+              </div>
+
+              <div class="input-group input-group-lg mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-             <div class="col-lg-10 col-md-8 ">
-                <form>
-                    <div class="input-group input-group-lg mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fas fa-user"></i>
-                        </span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="Name">
-                    </div>
-        
-                    <div class="input-group input-group-lg mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fas fa-envelope"></i>
-                        </span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="Email">
-                    </div>
-        
-                    <div class="input-group input-group-lg mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <i class="fas fa-pencil-alt"></i>
-                        </span>
-                      </div>
-                      <textarea class="form-control" placeholder="Message" rows="5"></textarea>
-                    </div>
-        
-                    <input type="submit" value="Submit" class="btn btn-cont btn-block btn-lg">
-                  </form>
-               
-                </div>
+                <textarea class="form-control" placeholder="Message" rows="5"></textarea>
+              </div>
 
-            </div>
+              <input type="submit" value="Submit" class="btn btn-cont btn-block btn-lg">
+            </form>
+
+          </div>
 
         </div>
-    </div>
-</section>
-<!--end of contact us section-->
-
-
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-dark text-muted">
-  <section class="d-flex justify-content-center justify-content-lg-between p-4">
-       <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-white fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Jalgalenirmansewa
-          </h6>
-          <p class="text-white">
-            Jalgale Nirman Sewa shortly named as BNS, a construction company in Hetauda,Nepal, was originally established in 1998 A. D. (2055 B. S.) with a sole objective of providing innovative and sustainable solutions to create a sustainable future for its people, customers and communities. 
-
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-white fw-bold mb-4">
-            Know More
-          </h6>
-          <p>
-            <a href="#!" class="text-white">About Us</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">Gallery</a>
-          </p>
-          <p>
-            <a href="projects.html" class="text-white"> Our Projects</a>
-          </p>
-          <p>
-            <a href="jobs.html" class="text-white">Jobs </a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-white fw-bold mb-4">
-            Find Us
-          </h6>
-          <!--Google map-->
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.806670713143!2d85.28704261425824!3d27.723254831401267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb192bfd89ba61%3A0x403ebbdd468c1d5!2sPrabhu%20Iron%20Industries%20PVT.LTD!5e0!3m2!1sen!2snp!4v1631762772868!5m2!1sen!2snp"
-        width="160%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-        
-         <!-- <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div> -->
-        <!-- Grid column -->
-
-        
-
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 ">
-          <!-- Links -->
-          <h6 class="text-white fw-bold mb-4">
-            Contact
-          </h6>
-          <p><i class="text-white fas fa-home me-3"></i> Swyambhu, Nepal</p>
-          <p>
-            <i class="text-white fas fa-envelope me-3"></i>
-            info@jalgale.com
-          </p>
-          <p><i class=" text-white fas fa-phone me-3"></i> +977- 1 90836</p>
-          <p><i class=" text-white fas fa-print me-3"></i> + 01 234 567 89</p>
-        </div>
-        <!-- Grid column -->  
 
       </div>
-      <!-- Grid row -->
     </div>
   </section>
-  <!-- Section: Links  -->
-  
+  <!--end of contact us section-->
 
-  <!-- Copyright -->
-  <div class="text-center p-4 text-white" style="background-color: rgba(231, 227, 236, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://Rossa.com.np/">Rossa.com.np</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-
-
-
-<script src="script.js"></script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js'%}" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'%}" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="{% static 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+{% endblock %}
