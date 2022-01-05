@@ -1,4 +1,6 @@
 <!---footer-->
+{% load static %}
+
 <footer class="bg-light text-dark pt-5 pv-4">
     <div class="container text-center text-med-left">
       <div class="row text-center text-md-left">
@@ -33,30 +35,34 @@
           <h5 class="text-uppercase mb-4 font-weight-bold text-info">let Us Help</h5>
           <hr class="mb-4">
           <p>
-            <li class="fas fa-home mr-3"></li> Swyambhu, Nepal</p>
-          <p>
-            <li class="fas fa-envelope mr-3"></li> info@jalgale.com
+            <li class="fas fa-home mr-3"></li> {{siteSettings.address}}
           </p>
           <p>
-            <li class="fas fa-phone mr-3"></li> +977-1 9023432
+            <li class="fas fa-envelope mr-3"></li> {{siteSettings.email}}
           </p>
           <p>
-            <li class="fas fa-print mr-3"></li> +977-1 9023432
+            <li class="fas fa-phone mr-3"></li> {{siteSettings.phone}}
           </p>
         </div>
         <hr class="row d-flex justify-content-center">
       </div>
     </div>
+     <!-- Copyright -->
+    <div class="text-center p-4 text-white" style="background-color: rgba(16, 25, 37, 0.822);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://Rossa.com.np/">Rossa.com.np</a>
+    </div>
+  <!-- Copyright -->
   </footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js'%}"
+<script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"
   integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
   crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'%}"
+<script src="{% static 'js/popper.js@1.16.0/dist/umd/popper.min.js' %}"
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
   crossorigin="anonymous"></script>
-<script src="{% static 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+<script src="{% static 'js/bootstrap.min.js' %}"
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
   crossorigin="anonymous"></script>

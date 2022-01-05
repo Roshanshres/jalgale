@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<!--Services-->
+<section class="services p-5" id="SERVICES">
+  <div class="container">
+    <div class="row">
+      <!--Title-->
+      <div class="col text-center mb-3">
+        <h2 class="mb-4">{{ page.title }}</h2>
+
+        <span class="title-border"></span>
+        <p>{{ page.sub_description }}</p>
+      </div>
+
+      <!-- end of title--->
+    </div>
+  </div>
+
+  <div class="service-inner-wrapper">
+    <div class="container">
+      {{ page.description | safe }}
+    </div>
+  </div>
+</section>
+<!--End of Services-->
+
+{% endblock %}
