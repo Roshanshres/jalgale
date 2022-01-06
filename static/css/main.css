@@ -397,3 +397,54 @@ height: 100%;
     background: #5353a5;
 }
 
+.albums-container{
+    position: relative;
+    width: auto;
+    min-height: 400px;
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgba(7, 4, 189, 0.884);
+   
+  
+}/*Makes a card and 3d effects*/
+
+.albums-container .img-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;/*CARD BODY*/
+    margin-bottom:10px;
+      
+}
+
+.albums-container .img-content img{
+    position: absolute;/*Hide the card Body*/
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.albums-container:hover .img-content img{
+    box-shadow: 0 10px 10px rgba(7, 4, 189, 0.884);
+}
+
+.albums-container .content{
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 60px;
+    background: #fff;
+    overflow: hidden;
+    padding: 15px;
+}
+.albums-container .content h3{
+    font-size: 20px;
+}
+
+.know-more a { text-decoration: none !important; color: #000;}
+.know-more a:hover { color: #0d6ef0 !important;}
+
+

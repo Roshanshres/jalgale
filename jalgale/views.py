@@ -7,10 +7,11 @@ from django.core.mail import send_mail, BadHeaderError
 
 from django.core.cache import cache
 
-from jalgale.models import Project
+from jalgale.models import Album, Gallery, Project
 from jalgale.models import ContactUs
 from jalgale.models import Sitesetting
 from jalgale.models import Page
+from jalgale.models import Testimonial
 
 
 
@@ -18,13 +19,16 @@ from jalgale.models import Page
 
 def index(request):
     projects = Project.objects.all()
+    testimonials = Testimonial.objects.all()
+    project_page = Page.objects.get(slug='projects')
+    service_page = Page.objects.get(slug='our-services')
 
     setting = cache.get('siteSetting', None)
     if setting is None:
         siteSettings = Sitesetting.objects.all()[:1].get()
-        cache.add('siteSetting', siteSettings)
+        cache.set('siteSetting', siteSettings, 86400)
 
-    return render(request, "index.html", {'projects': projects, 'siteSettings': cache.get('siteSetting')})
+    return render(request, "index.html", {'projects': projects, 'siteSettings': cache.get('siteSetting'), 'testimonials':testimonials, 'project_page': project_page, 'service_page': service_page })
 
 def content_desc(request):
     pass
@@ -44,6 +48,11 @@ def page_detail(request, page_slug):
 
 def about_us(request):
     return render(request, "about_us.html", {'siteSettings': cache.get('siteSetting')})
+
+# def testimonials(request, project_id):
+#     testimonials = Project.objects.get(id=project_id)
+#     return render(request, "project_detail.html", {'project': project, 'siteSettings': cache.get('siteSetting')})
+
 
 def services(request):
     return render(request, "services.html", {'siteSettings': cache.get('siteSetting')})
@@ -86,3 +95,11 @@ def contact(request):
 
 def register(request):
     return render(request,"register.html", {'siteSettings': cache.get('siteSetting')})
+
+def gallery(request):
+    albums = Album.objects.all()
+    return render(request, "albums.html", {'albums': albums, 'siteSettings': cache.get('siteSetting')})
+
+def album(request, album_id):
+    albums = Gallery.objects.filter(album_id=album_id)
+    return render(request, "album_detail.html", {'albums': albums, 'siteSettings': cache.get('siteSetting')})

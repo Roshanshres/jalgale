@@ -14,6 +14,9 @@ urlpatterns = [
     path("services", views.services, name="services"),
     path("contact-us", views.contact_us,name="contact_us"),
     path("register", views.register,name="register"),
+    path("gallery", views.gallery,name="gallery"),
+    path("album/<int:album_id>", views.album,name="album"),
+
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

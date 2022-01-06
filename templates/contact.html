@@ -1,27 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<script src="https://kit.fontawesome.com/332a215f17.js" cross origin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap" rel="stylesheet">   
-<title>Construction</title>
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
-
-<body>
-  {% load crispy_forms_tags %}
 <!--Contact us section-->
 <section class="bg-color p-5">
   <div class="container">
     <div class="contact-us">
       <div class="row">
-        <div class="col-md-11 text-center">
+        <div class="col-md-12 text-center mb-3">
           <h2>Contact Us</h2>
           <span class="title-border"></span>
           <p>For more information contact us </p>
@@ -31,25 +13,25 @@
         <div class="col-md-4 text-center">
           <i class="fas fa-mobile-alt fa-3x color"></i>
           <h5 class="mt-3">Phone</h5>
-          <p>+977 01-4890386</p>
+          <p>{{siteSettings.phone}}</p>
         </div>
         <div class="col-md-4 text-center">
           <i class="fas fa-map-marker-alt fa-3x color"></i>
           <h5 class="mt-3">Address</h5>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>{{siteSettings.address}}</p>
         </div>
         <div class="col-md-4 text-center">
           <i class="far fa-envelope-open fa-3x color"></i>
           <h5 class="mt-3">Email</h5>
-          <p>Jalgalenirmansewa@info.com
+          <p>{{siteSettings.email}}
           </p>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-10 col-md-8 ">
+          <br/>
           <form action= "{% url 'contact_us' %}" method="POST">
             {% csrf_token %}
-              {{form|crispy}}
             
             <div class="input-group input-group-lg mb-3">
               <div class="input-group-prepend">
@@ -57,7 +39,7 @@
                   <i class="fas fa-user"></i>
                 </span>
               </div>            
-            <input type="text" class="form-control" placeholder="Name">
+              <input type="text" name="name" class="form-control" placeholder="Name" required>
             </div>
 
             <div class="input-group input-group-lg mb-3">
@@ -66,7 +48,7 @@
                   <i class="fas fa-envelope"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" placeholder="Email">
+              <input type="text" name="email" class="form-control" placeholder="Email" required>
             </div>
 
             <div class="input-group input-group-lg mb-3">
@@ -75,11 +57,10 @@
                   <i class="fas fa-pencil-alt"></i>
                 </span>
               </div>
-              <textarea class="form-control" placeholder="Message" rows="5"></textarea>
+              <textarea name="message" class="form-control" placeholder="Message" rows="5" required></textarea>
             </div>
 
             <input type="submit" value="Submit" class="btn btn-cont btn-block btn-lg">
-          </form>
           </form>
         </div>
 
@@ -88,57 +69,4 @@
     </div>
   </div>
 </section>
-
-
-<!---FoTER-->
-<footer class="bg-light text-dark pt-5 pv-4">
-  <div class="container text-center text-med-left">
-    <div class="row text-center text-md-left">
-      
-      <div class="col-md-3 col-lg-xl-3 mc-auto mt-3" >
-        <h5 class="text-uppercase mb-4 font-weight-bold text-info"> About Us</h5>
-        <hr class="mb-4">
-        <p> hello my webpfe</p>
-      </div>
-      <div class="col-md-2 col-lg-2 col-xl-2  mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-info">Know More</h5>
-        <hr class="mb-4">
-        <p>
-          <a href="projects.html" class="text-dark" style="text-decoration:none"> Our Projects</a>
-        </p>
-        <p>
-          <a href="gallery.html" class="text-dark" style="text-decoration:none"> Gallery</a>
-        </p>
-        <p>
-          <a href="jobs.html" class="text-dark" style="text-decoration:none"> Jobs</a>
-        </p>
-      </div>
-      <div class="col-md-2 col-lg-2 col-xl-2  mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-info"> Find U</h5>
-        <hr class="mb-4">
-       
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.806670713143!2d85.28704261425824!3d27.723254831401267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb192bfd89ba61%3A0x403ebbdd468c1d5!2sPrabhu%20Iron%20Industries%20PVT.LTD!5e0!3m2!1sen!2snp!4v1631762772868!5m2!1sen!2snp"
-      width="150%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-    
-</div>
-      <div class="col-md-4 col-lg-3 col-xl-3  mx-auto mt-3">
-        <h5 class="text-uppercase mb-4 font-weight-bold text-info">let Us Help</h5>
-        <hr class="mb-4">
-        <p>
-          <li class="fas fa-home mr-3"></li> Swyambhu, Nepal</p>
-        <p>
-          <li class="fas fa-envelope mr-3"></li> info@jalgale.com
-        </p>
-        <p>
-          <li class="fas fa-phone mr-3"></li> +977-1 9023432
-        </p>
-        <p>
-          <li class="fas fa-print mr-3"></li> +977-1 9023432
-        </p>
-    </div>
-    <hr class="row d-flex justify-content-center">
-  </div>
-  
-</footer>
-
-  </head>
+<!--end of contact us section-->
